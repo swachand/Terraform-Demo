@@ -1,14 +1,12 @@
-provider "azurerm" {
-  version = ">=2.0"
-  # The "feature" block is required for AzureRM provider 2.x.
-  features {}
+
+terraform {
+    backend "azurerm" {}
 }
 
 provider "azurerm" { 
-  features {} 
-  alias = "cloudtf"
   subscription_id = “8d16864b-fa64-479f-bd29-7feada3078b9”
   skip_provider_registration = "true"
+  features {} 
 }
 
 
