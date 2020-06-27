@@ -11,14 +11,6 @@ provider "azurerm" {
   skip_provider_registration = "true"
 }
 
-
-provider "azurerm" { 
-  features {} 
-  alias = "cloudtf"
-  subscription_id = “8d16864b-fa64-479f-bd29-7feada3078b9”
-  skip_provider_registration = "true"
-}
-
 resource "azurerm_resource_group" "resource_group_terraform" {
   name     = "terraform_resource_group"
   location = "West Europe"
