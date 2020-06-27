@@ -4,6 +4,14 @@ provider "azurerm" {
   features {}
 }
 
+provider "azurerm" { 
+  features {} 
+  alias = "cloudtf"
+  subscription_id = “8d16864b-fa64-479f-bd29-7feada3078b9”
+  skip_provider_registration = "true"
+}
+
+
 resource "azurerm_resource_group" "RG-Terraform" {
   name     = "terraform-resource-group"
   location = "West Europe"
